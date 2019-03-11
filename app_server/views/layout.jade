@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/aos.css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800', rel='stylesheet')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css')
+
+  body
+    script(src='/Bootstrap/js/jquery.min.js')
+    script(src='/Bootstrap/js/bootstrap.bundle.min.js')
+    script(src='/Bootstrap/js/jquery.easing.min.js')
+    script(src='/Bootstrap/js/scrollreveal.min.js')
+    script(src='/Bootstrap/js/jquery.magnific-popup.min.js')
+    script(src='/Bootstrap/js/creative.min.js')
+    script(src='https://unpkg.com/aos@next/dist/aos.js')
+    script.
+      AOS.init()
+    script
+    header.fixed-top.p-auto
+      .container
+        nav.navbar.navbar-expand.p-0
+          a.navbar-brand.mr-0.pr-4(href='/')
+            h2.logo Multimedia-Box
+          a#cls-btn(href='javascript:void(0)') ×
+          #sidenav.navbar-collapse.nav-sec
+            ul.navbar-nav.mr-auto.header-nav
+              li.nav-item.active
+                a.nav-link.active.text-white(href='index.html')
+                  | Home
+              li.nav-item
+                a.nav-link.text-white(href='services.html')
+                  | Services
+              li.nav-item
+                a.nav-link.text-white(href='blog.html')
+                  | blog
+              li.nav-item
+                a.nav-link.text-white(href='portfolio.html')
+                  | Portfolio
+              li.nav-item
+                a.nav-link.text-white(href='contact.html')
+                  | Contact
+            .search-box.mr-lg-0
+              input(type='text', placeholder='Search here...', name='search1')
+              button(type='submit')
+                i.fa.fa-search
+            .menu-icon.d-lg-none
+              span.ml-auto
+              span.ml-auto
+              span.ml-auto
+    block content
