@@ -1,5 +1,169 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+   section.banner.innerpage-banner.contact-banner#inicio
+     .container
+       h1(data-aos='fade-up', data-aos-duration='1000') Personajes que van creando e impresionando
+   section#my-port.about-page.contact-page.portfolio-page
+     .container
+       h2(data-aos='fade-up', data-aos-duration='1000') Artistas
+       p.text-left(data-aos='fade-up', data-aos-duration='1000')
+         | Lorem Ipsum is simply dummy text of the
+         | printing and typesetting industry. Lorem Ipsum has
+         | been the
+         | industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+         | scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+         | electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+         | of Letraset sheets containing Lorem Ipsum passages..
+       ul.row.tz-gallery
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-1.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1000')
+               figure
+                 img(src='images/index-portfolio-1.jpg', alt='one')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-2.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1200')
+               figure
+                 img(src='images/index-portfolio-2.jpg', alt='two')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-3.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1400')
+               figure
+                 img(src='images/index-portfolio-3.jpg', alt='three')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-4.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1000')
+               figure
+                 img(src='images/index-portfolio-4.jpg', alt='four')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-5.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1200')
+               figure
+                 img(src='images/index-portfolio-5.jpg', alt='five')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-6.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1400')
+               figure
+                 img(src='images/index-portfolio-6.jpg', alt='six')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-1.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1000')
+               figure
+                 img(src='images/index-portfolio-1.jpg', alt='seven')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-2.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1200')
+               figure
+                 img(src='images/index-portfolio-2.jpg', alt='eight')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-3.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1400')
+               figure
+                 img(src='images/index-portfolio-3.jpg', alt='nine')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-4.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1000')
+               figure
+                 img(src='images/index-portfolio-4.jpg', alt='ten')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-5.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1200')
+               figure
+                 img(src='images/index-portfolio-5.jpg', alt='eleven')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+         li.col-sm-6.col-md-4
+           a.lightbox(href='images/index-portfolio-6.jpg')
+             .portfolio-gallery(data-aos='fade-up', data-aos-duration='1400')
+               figure
+                 img(src='images/index-portfolio-6.jpg', alt='tweleve')
+               .overlay
+                 span
+                   | Nombre Artista
+                   br
+                   |  profesion
+  
+    footer
+     .layer
+       .container
+         nav.navbar.navbar-expand.p-0
+           a.navbar-brand.mr-0.pr-2.pr-sm-4(href='/')
+             h2.logo Multimedia-Box
+           .nav-sec
+             ul.ml-md-auto
+               li.nav-item.active
+                 a.nav-link.active.text-black(href='/')
+                   | Home
+               li.nav-item
+                 a.nav-link(href='/blog')
+                   | Blog
+               li.nav-item
+                 a.nav-link(href='/artistas')
+                   | artistas
+               li
+                 p.m-0
+                   | ©2019, Multimedia-Box todo los derechos reservados
+    a(href='#inicio')               
+     button.scrolltop-btn
+       i.fa.fa-angle-up
+   script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js')
+   script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js')
+   script(src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css')
+   script(src='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js')
+   script(src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js')
+   script(src='js/script.js')

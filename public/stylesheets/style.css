@@ -227,7 +227,7 @@ section .container .get-started-btn {
     font-weight: 700;
     color: #fff;
     text-align: center;
-    background: linear-gradient(180deg, rgba(255, 244, 123, 1) 22%, rgba(255, 223, 49, 1) 95%);
+    background: linear-gradient(180deg, rgba(199, 77, 156, 1) 22%, rgba(107, 54, 91, 1) 95%);
     display: inline-block;
     text-transform: uppercase;
     min-width: 209px;
@@ -2687,4 +2687,36 @@ section.contact-page ul li:nth-child(2) {
 }
 .logo{
   color:white;
+}
+.tabartist{
+    font-size: 150px!important;
+  writing-mode: vertical-lr;
+text-orientation: use-glyph-orientation;
+-moz-transform: scale(-1, -1);
+-webkit-transform: scale(-1, -1);
+-o-transform:scale(-1, -1);
+-ms-transform: scale(-1, -1);
+transform: scale(-1, -1);
+}
+
+
+section .container .get-started-btn-artistas {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(199, 77, 156, 1) 22%, rgba(107, 54, 91, 1) 95%);
+    display: inline-block;
+    text-transform: uppercase;
+    min-width: 209px;
+    min-height: 69px;
+    line-height: 69px;
+    border-radius: 100px;
+    transition: all 0.5s;
+    margin-left: 50px;
+}
+
+section .container .get-started-btn-artistas:hover {
+    background: #fff;
+    color: #000000;
 }

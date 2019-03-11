@@ -1,5 +1,140 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+   section.banner.innerpage-banner.contact-banner#inicio
+     .container
+       h1(data-aos='fade-up', data-aos-duration='1000') EVENTOS, NOTICIAS Y PROYECTOS 
+   section.blog-page
+     .container
+       h2(data-aos='fade-up', data-aos-duration='1000') ULTIMOS ARTICULOS
+       ul.row
+         li.col-md-6
+           .overlay(data-aos='fade-up', data-aos-duration='1000')
+             a(href='/blog')
+               .blog-img
+                 figure
+                   img.img-fluid(src='images/img-1.jpg', alt='img-1')
+                 .blog-img-inner
+               h5
+                 | Lorem Ipsum is simply dummy text of the printing
+               p
+                 | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                 | been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                 | a galley of type and scrambled it to make a type specimen book. It has survived not only
+                 | five centuries...
+             a(href='/blog') LEER MÁS
+         li.col-md-6
+           .overlay(data-aos='fade-up', data-aos-duration='1400')
+             a(href='/blog')
+               .blog-img
+                 figure
+                   img.img-fluid(src='images/img-2.jpg', alt='img-2')
+                 .blog-img-inner
+               h5
+                 | Lorem Ipsum is simply dummy text of the printing
+               p
+                 | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                 | been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                 | a galley of type and scrambled it to make a type specimen book. It has survived not only
+                 | five centuries...
+             a(href='/blog') LEER MÁS
+         li.col-md-6
+           .overlay(data-aos='fade-up', data-aos-duration='1000')
+             a(href='/blog')
+               .blog-img
+                 figure
+                   img.img-fluid(src='images/img-1.jpg', alt='img-1')
+                 .blog-img-inner
+               h5
+                 | Lorem Ipsum is simply dummy text of the printing
+               p
+                 | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                 | been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                 | a galley of type and scrambled it to make a type specimen book. It has survived not only
+                 | five centuries...
+             a(href='/blog') LEER MÁS
+         li.col-md-6
+           .overlay(data-aos='fade-up', data-aos-duration='1400')
+             a(href='/blog')
+               .blog-img
+                 figure
+                   img.img-fluid(src='images/img-2.jpg', alt='img-2')
+                 .blog-img-inner
+               h5
+                 | Lorem Ipsum is simply dummy text of the printing
+               p
+                 | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                 | been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                 | a galley of type and scrambled it to make a type specimen book. It has survived not only
+                 | five centuries...
+             a(href='/blog') LEER MÁS
+         li.col-md-6
+           .overlay(data-aos='fade-up', data-aos-duration='1000')
+             a(href='/blog')
+               .blog-img
+                 figure
+                   img.img-fluid(src='images/img-1.jpg', alt='img-1')
+                 .blog-img-inner
+               h5
+                 | Lorem Ipsum is simply dummy text of the printing
+               p
+                 | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                 | been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                 | a galley of type and scrambled it to make a type specimen book. It has survived not only
+                 | five centuries...
+             a(href='/blog') LEER MÁS
+         li.col-md-6
+           .overlay(data-aos='fade-up', data-aos-duration='1400')
+             a(href='/blog')
+               .blog-img
+                 figure
+                   img.img-fluid(src='images/img-2.jpg', alt='img-2')
+                 .blog-img-inner
+               h5
+                 | Lorem Ipsum is simply dummy text of the printing
+               p
+                 | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                 | been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                 | a galley of type and scrambled it to make a type specimen book. It has survived not only
+                 | five centuries...
+             a(href='/blog') LEER MÁS
+       .navigation
+         ul
+           li
+             a(href='#') 1
+           li
+             a(href='#') 2
+           li
+             a(href='#') 3
+           li
+             a(href='#') 4
+           li
+             a(href='#') 5
+    footer
+     .layer
+       .container
+         nav.navbar.navbar-expand.p-0
+           a.navbar-brand.mr-0.pr-2.pr-sm-4(href='/')
+             h2.logo Multimedia-Box
+           .nav-sec
+             ul.ml-md-auto
+               li.nav-item.active
+                 a.nav-link.active.text-black(href='/')
+                   | Home
+               li.nav-item
+                 a.nav-link(href='/blog')
+                   | Blog
+               li.nav-item
+                 a.nav-link(href='/artistas')
+                   | artistas
+               li
+                 p.m-0
+                   | ©2019, Multimedia-Box todo los derechos reservados
+    a(href='#inicio')               
+     button.scrolltop-btn
+       i.fa.fa-angle-up
+     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js')
+     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js')
+     script(src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js')
+     script(src='js/script.js')

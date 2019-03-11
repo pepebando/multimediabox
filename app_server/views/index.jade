@@ -1,15 +1,15 @@
 extends layout
 
 block content
-      section.banner
+      section.banner#inicio
         .container(data-aos='fade-up', data-aos-duration='1000')
-          h1 Let’s Create Something Awesome Together
-          h6 This is how we work, to make your project awesome !
-          a.get-started-btn(href='#') get started
-      section.index-about-sec
+          h1 ¿Qué son los Medios Interactivos?
+          h6 Conoce más sobre las posibilidades de combinar arte y programación
+          a.get-started-btn(href='#about') Conocer más
+      section.index-about-sec#about
         .layer
           .container
-            h5(data-aos='zoom-in', data-aos-duration='1000') This is how we work, to make your project awesome !
+            h5(data-aos='zoom-in', data-aos-duration='1000') ¿Qué son los Medios Interactivos?
             p(data-aos='zoom-in', data-aos-duration='1000')
               | Lorem Ipsum is simply dummy text of the printing and
               | typesetting industry. Lorem Ipsum has been the
@@ -22,28 +22,28 @@ block content
             ul.row
               li.col-sm-6.col-lg-3(data-aos='fade-up', data-aos-duration='1000')
                 .index-abt-content
-                  h3 web designing
+                  h3 DISEÑO WEB
                   p
                     | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                     | dummy
                     | text ever since the 1500s, when an...
               li.col-sm-6.col-lg-3(data-aos='fade-up', data-aos-duration='1200')
                 .index-abt-content
-                  h3 domian registering
+                  h3 VIDEO Y ANIMACIÓN
                   p
                     | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                     | dummy
                     | text ever since the 1500s, when an...
               li.col-sm-6.col-lg-3(data-aos='fade-up', data-aos-duration='1400')
                 .index-abt-content
-                  h3 wordpress development
+                  h3 GAME industry
                   p
                     | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                     | dummy
                     | text ever since the 1500s, when an...
               li.col-sm-6.col-lg-3(data-aos='fade-up', data-aos-duration='1600')
                 .index-abt-content
-                  h3 graphic design
+                  h3 DISEÑO GRÁFICO 
                   p
                     | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                     | dummy
@@ -52,97 +52,27 @@ block content
         .container
           .services-filter
             .service-list
-              h3.tab-link.current(data-tab='tab-1') our portfolio
-              h3.tab-link(data-tab='tab-2') read articles
-              h3.tab-link(data-tab='tab-3') our clients
-              h3.tab-link(data-tab='tab-4') view pricing
+              h3.tabartist.current(data-tab='tab-1') Artistas
+              a.get-started-btn-artistas(href='/artistas') Más artistas
             .service-images
               ul#tab-1.tab-content.current
-                li(data-aos='fade-up', data-aos-duration='1000')
-                  a(href='portfolio.html')
-                    figure(style='background:url(images/index-portfolio-1.jpg); background-position: center right')
-                li(data-aos='fade-up', data-aos-duration='1200')
-                  a(href='portfolio.html')
-                    figure(style='background:url(images/index-portfolio-2.jpg); background-position: center')
-                li(data-aos='fade-up', data-aos-duration='1400')
-                  a(href='portfolio.html')
-                    figure(style='background:url(images/index-portfolio-3.jpg);')
-                li(data-aos='fade-up', data-aos-duration='1000')
-                  a(href='portfolio.html')
-                    figure(style='background:url(images/index-portfolio-4.jpg); background-position: center right')
-                li(data-aos='fade-up', data-aos-duration='1200')
-                  a(href='portfolio.html')
-                    figure(style='background:url(images/index-portfolio-5.jpg);')
-                li(data-aos='fade-up', data-aos-duration='1400')
-                  a(href='portfolio.html')
-                    figure(style='background:url(images/index-portfolio-6.jpg); background-position: center ')
-              ul#tab-2.tab-content.article-section
                 li
-                  a(href='blogsingle.html')
-                    figure(style='background:url(images/article-img.jpg); background-position: center right')
-                    h4 girl holding black jacket
-                    p
-                      | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae iste deserunt a
-                      | rerum temporibus quidem consequuntur facilis fugit laborum reprehenderit!
-                  a.article-btn(href='blogsingle.html') read more
-                li
-                  a(href='blogsingle.html')
-                    figure(style='background:url(images/article-img1.jpg);')
-                    h4 girl holding mug
-                    p
-                      | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae iste deserunt a
-                      | rerum temporibus quidem consequuntur facilis fugit laborum reprehenderit!
-                  a.article-btn(href='blogsingle.html') read more
-              ul#tab-3.tab-content.client-section
-                li
-                  a(href='blogsingle.html')
+                  a(href='/artistas')
                     figure(style='background:url(images/article-img.jpg); background-position: center;')
                 li
-                  a(href='blogsingle.html')
+                  a(href='/artistas')
                     figure(style='background:url(images/article-img1.jpg); background-position: center;')
                 li
-                  a(href='blogsingle.html')
+                  a(href='/artistas')
                     figure(style='background:url(images/our-clients1.jpg); background-position: center;')
                 li
-                  a(href='blogsingle.html')
+                  a(href='/artistas')
                     figure(style='background:url(images/index-portfolio-2.jpg); background-position: center')
-                li
-                  a(href='blogsingle.html')
-                    figure(style='background:url(images/index-portfolio-6.jpg); background-position: center ')
-                li
-                  a(href='blogsingle.html')
-                    figure(style='background:url(images/index-portfolio-3.jpg);')
-              ul#tab-4.tab-content.pricing-section
-                li
-                  .content
-                    h2 lite
-                    h6 free
-                    // <a href="https://www.template.net/editable/websites" class="buy-now">download</a>
-                  ul.features
-                    li 10 Downloads of Pro Templates a month
-                    li Unlimited Downloads of Free Templates without Giving Credit
-                    li Royalty Free Templates with Images, Fonts & Art Work
-                    li Original Content by Business Writers
-                    li 100% Customizable, Shareable & Print Ready
-                    li Available File Format (Adobe, MS Office, Mac & G Drive....)
-                  a.buy-now(href='blogsingle.html') buy now
-                li
-                  .content
-                    h2 Pro
-                    h6 5$/Month
-                    // <a href="https://www.template.net/editable/websites" class="buy-now">Subscribe</a>
-                  ul.features
-                    li 10 Downloads of Pro Templates a month
-                    li Unlimited Downloads of Free Templates without Giving Credit
-                    li Royalty Free Templates with Images, Fonts & Art Work
-                    li Original Content by Business Writers
-                    li 100% Customizable, Shareable & Print Ready
-                    li Available File Format (Adobe, MS Office, Mac & G Drive....)
-                  a.buy-now(href='blogsingle.html') buy now
-      section.index-blog
+            
+      section.index-contact
         .layer
           .container
-            h3(data-aos='zoom-in', data-aos-duration='1000') We write great web design articles, have a look on them
+            h3(data-aos='zoom-in', data-aos-duration='1000') Articulos, eventos y más sobre medios Interactivos
             p(data-aos='zoom-in', data-aos-duration='1000')
               | Lorem Ipsum is simply dummy text of the printing and
               | typesetting industry. Lorem Ipsum has been the
@@ -151,76 +81,50 @@ block content
             ul.row
               li.col-md-6
                 .overlay(data-aos='fade-up', data-aos-duration='1000')
-                  a(href='blogsingle.html')
+                  a(href='/blog')
                     .blog-img
                       figure
                         img.img-fluid(src='images/img-1.jpg', alt='img-1')
                       .blog-img-inner
                     h5
-                      | Girl wearing white frock holding coffee and posing for photo.
-                  a(href='blogsingle.html') read more
+                      | Taller sobre p5 y React
+                  a(href='/blog') read more
               li.col-md-6
                 .overlay(data-aos='fade-up', data-aos-duration='1300')
-                  a(href='blogsingle.html')
+                  a(href='/blog')
                     .blog-img
                       figure
                         img.img-fluid(src='images/img-2.jpg', alt='img-2')
                       .blog-img-inner
                     h5
-                      | Man getting ready for photoshoot by wearing blue suit
-                  a(href='blogsingle.html') read more
-      section.index-contact
-        .layer
-          .container
-            h3(data-aos='zoom-in', data-aos-duration='1000') Got a project in mind? please contact and lets make awesome
-            p(data-aos='zoom-in', data-aos-duration='1000')
-              | Lorem Ipsum is simply dummy text of the printing and
-              | typesetting industry. Lorem Ipsum has been the
-              | industry's type specimen book. It has survived not only five centuries, but also the leap into
-              | electronic typesetting,
-            form(data-aos='fade-up', data-aos-duration='1000')
-              ul.row
-                li.col-md-4
-                  input.w-100(type='text', required='', placeholder='Your Name')
-                li.col-md-4
-                  input.w-100(type='email', required='', placeholder='Your Email Id')
-                li.col-md-4
-                  input.w-100(type='text', required='', placeholder='Your Mobile No')
-                li.col-12
-                  textarea.w-100(required='', placeholder='Your Message')
-              button(type='submit') alright submit it
+                      | Los mejores lenguajes de programación para web development
+                  a(href='/blog') read more
+              .overlay(data-aos='fade-up', data-aos-duration='1200')
+                a.get-started-btn(href='/blog') Más Articulos
       footer
         .layer
           .container
             nav.navbar.navbar-expand.p-0
-              a.navbar-brand.mr-0.pr-2.pr-sm-4(href='index.html')
-                img(src='images/logo.png', alt='logo')
+              a.navbar-brand.mr-0.pr-2.pr-sm-4(href='/')
+                h2.logo Multimedia-Box
               .nav-sec
                 ul.ml-md-auto
                   li.nav-item.active
-                    a.nav-link.active.text-black(href='index.html')
+                    a.nav-link.active.text-black(href='/')
                       | Home
                   li.nav-item
-                    a.nav-link(href='about.html')
-                      | About Us
+                    a.nav-link(href='/blog')
+                      | Blog
                   li.nav-item
-                    a.nav-link(href='services.html')
-                      | Services
-                  li.nav-item
-                    a.nav-link(href='portfolio.html')
-                      | Portfolio
-                  li.nav-item
-                    a.nav-link(href='contact.html')
-                      | Contact
-                  li.nav-item
-                    a.nav-link(href='support.html')
-                      | Support
+                    a.nav-link(href='/artistas')
+                      | artistas
                   li
                     p.m-0
-                      | ©2018, All Rights Reserved. Designed By
-                      a(href='https://www.template.net/editable/websites') Template.net
-      button.scrolltop-btn
-        i.fa.fa-angle-up
+                      | ©2019, Multimedia-Box todo los derechos reservados
+      a(href='#inicio')               
+        button.scrolltop-btn
+          i.fa.fa-angle-up
+        
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
       script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js')
       script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js')
