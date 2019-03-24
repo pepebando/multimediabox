@@ -1,0 +1,50 @@
+extends layout
+
+block content
+
+  body
+    header.mastheadsettings.text-center.text-white.d-flex
+      .container-fluid.my-auto
+        .testbox
+          form.form-horizontal
+            fieldset
+              // Form Name
+              h3 ACCOUNT SETTINGS
+              // Text input
+              .form-group
+                label.col-md-4AS.control-label(for='textinput') Username
+                |   
+                |   
+                .col-md-4AS
+                  input#textinput.form-control.input-md(name='textinput', type='text', placeholder='Pedrito Coco ')
+                  |   
+                  // Text input
+              .form-group
+                label.col-md-4AS.control-label(for='textinput') Email
+                |   
+                |   
+                .col-md-4AS
+                  input#textinput.form-control.input-md(name='textinput', type='text', placeholder='pedroc1996@gmail.com')
+                  |   
+              // Password input
+              .form-group
+                label.col-md-4AS.control-label(for='passwordinput') new password
+                |   
+                .col-md-4AS
+                  input#passwordinput.form-control.input-md(name='passwordinput', type='password', placeholder='new password')
+              // Password input
+              .form-group
+                label.col-md-4.control-label(for='passwordinput') repeat password
+                |   
+                .col-md-4AS
+                  input#passwordinput.form-control.input-md(name='passwordinput', type='password', placeholder='repeat password')
+              // Button
+              .form-group  
+                .col-md-4AS
+                  button#singlebutton.btn.btn-success(name='singlebutton') Save all settings
+              // Button
+              .form-group
+                .col-md-4AS
+                  button#singlebutton.btn.btn-danger(name='singlebutton') Log Out
+              // Multiple Checkboxes
+              

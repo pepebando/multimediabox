@@ -1,0 +1,28 @@
+extends layout
+
+block content
+
+  header.backgroundLogin.text-center.text-white.d-flex
+    .container-fluid.my-auto
+      .row
+        .col-lg-10.mx-auto
+          h1.text-uppercase
+            strong Unete a nuestra pagina
+          hr
+  .login-page
+  .form
+    form.register-form
+      input(type='text', placeholder='name')
+      input(type='password', placeholder='password')
+      input(type='text', placeholder='email address')
+      button create
+      p.message
+        | Already registered? 
+        a(href='#', id='signinD') Sign In
+    form.login-form
+      input(type='text', placeholder='username')
+      input(type='password', placeholder='password')
+      button login
+      p.message
+        | Not registered? 
+        a(href='#', id='createAcoD') Create an account

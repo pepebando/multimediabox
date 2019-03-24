@@ -1,0 +1,47 @@
+extends layout
+
+block content
+
+  header.backgroundFavoritos.text-center.text-white.d-flex
+    .container-fluid.my-auto
+      .row
+        .col-lg-10.mx-auto
+          h1.text-uppercase
+            strong Mira nuestro catálago completo
+              h3.text-uppercase
+                spam  
+                a(href="../favoritos" style={color: 'white'}) Peliculas
+                strong - 
+                a(href="../favmusica" style={color: 'white'}) Musica 
+                strong - 
+                a(href="../favseries" style={color: 'black'}) Series   
+                strong -               
+                a(href="../favlibros" style={color: 'white'}) Libros 
+                strong - 
+                a(href="../favjuegos" style={color: 'white'}) Juegos 
+          hr.fav
+  br            
+  .container
+    .row
+      .col-sm-12
+        h3.text-uppercase
+          i.fa.fa-film.Gold(aria-hidden='true')
+          spam  
+          strong Series
+  .container
+    .row.pel
+      each serie in series
+        .col-sm-3
+          .card
+            img(src=serie.imagen, alt='Avatar', style='width:100%')
+            .container
+              h4
+              .txt-color
+                i.fa.fa-film(aria-hidden='true')
+                br
+                b= serie.titulo 
+    br
+
+br 
+br 
+br 
