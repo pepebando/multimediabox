@@ -1,44 +1,138 @@
 extends layout
 
 block content
-
-  header.masthead.text-center.text-white.d-flex
-    .container-fluid.my-auto
-      .row
-        .col-lg-10.mx-auto
-          h1.text-uppercase
-            strong Recomendaciones Para cada dia
-          hr
-        .col-lg-8.mx-auto
-          p.text-faded.mb-5
-            | Nunca mas te vas a aburrir en tu vida
-          a.btn.btn-primary.btn-xl.js-scroll-trigger(href='#about') RECOMENDACIONES!
-  section#about.bg-primary
-    .container
-      .row
-        .col-sm-12.centerLetter
-          .txt-color
-            h1.text-uppercase
-              strong Recomendaciones 
-              spam  
-            hr
-        .col-lg-8.mx-auto.centerLetter
-          p.text-faded.mb-5
-            |Esto es lo que tenemos para ti el dia de hoy
-      .row
-        each pelicula in peliculas
-          .col-sm-4
-            .card
-              .container
-                img.image(src=pelicula.imagen, alt='Avatar', style='width:100%')
-                .middle
-                  .text SINOPSIS:
-                    p=pelicula.sinopsis
-                .container
-                  h4
-                  .txt-color
-                    i.fa.fa-film(aria-hidden='true')
-                    br
-                    b= pelicula.titulo 
-              
-                
+      section.banner#inicio
+        .container(data-aos='fade-up', data-aos-duration='1000')
+          h1 ¿Qué son los Medios Interactivos?
+          h6 Conoce más sobre las posibilidades de combinar arte y programación
+          a.get-started-btn(href='#about') Conocer más
+      section.index-about-sec#about
+        .layer
+          .container
+            h5(data-aos='zoom-in', data-aos-duration='1000') ¿Qué son los Medios Interactivos?
+            p(data-aos='zoom-in', data-aos-duration='1000')
+              | Lorem Ipsum is simply dummy text of the printing and
+              | typesetting industry. Lorem Ipsum has been the
+              | industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              | scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+              | into
+              | electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+              | release
+              | of Letraset sheets containing Lorem Ipsum passages...
+            ul.row
+              li.col-sm-6.col-lg-3(data-aos='fade-up', data-aos-duration='1000')
+                .index-abt-content
+                  h3 DISEÑO WEB
+                  p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    | dummy
+                    | text ever since the 1500s, when an...
+              li.col-sm-6.col-lg-3(data-aos='fade-up', data-aos-duration='1200')
+                .index-abt-content
+                  h3 VIDEO Y ANIMACIÓN
+                  p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    | dummy
+                    | text ever since the 1500s, when an...
+              li.col-sm-6.col-lg-3(data-aos='fade-up', data-aos-duration='1400')
+                .index-abt-content
+                  h3 GAME industry
+                  p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    | dummy
+                    | text ever since the 1500s, when an...
+              li.col-sm-6.col-lg-3(data-aos='fade-up', data-aos-duration='1600')
+                .index-abt-content
+                  h3 DISEÑO GRÁFICO 
+                  p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                    | dummy
+                    | text ever since the 1500s, when an...
+      section.index-services
+        .container
+          .services-filter
+            .service-list
+              h3.tabartist.current(data-tab='tab-1') Artistas
+              a.get-started-btn-artistas(href='/artistas') Más artistas
+            .service-images
+              ul#tab-1.tab-content.current
+                li
+                  a(href='/artistas')
+                    figure(style='background:url(images/article-img.jpg); background-position: center;')
+                li
+                  a(href='/artistas')
+                    figure(style='background:url(images/article-img1.jpg); background-position: center;')
+                li
+                  a(href='/artistas')
+                    figure(style='background:url(images/our-clients1.jpg); background-position: center;')
+                li
+                  a(href='/artistas')
+                    figure(style='background:url(images/index-portfolio-2.jpg); background-position: center')
+            
+      section.index-contact
+        .layer
+          .container
+            h3(data-aos='zoom-in', data-aos-duration='1000') Articulos, eventos y más sobre medios Interactivos
+            p(data-aos='zoom-in', data-aos-duration='1000')
+              | Lorem Ipsum is simply dummy text of the printing and
+              | typesetting industry. Lorem Ipsum has been the
+              | industry's type specimen book. It has survived not only five centuries, but also the leap into
+              | electronic typesetting,
+            ul.row
+              li.col-md-6
+                .overlay(data-aos='fade-up', data-aos-duration='1000')
+                  a(href='/blog')
+                    .blog-img
+                      figure
+                        img.img-fluid(src='images/img-1.jpg', alt='img-1')
+                      .blog-img-inner
+                    h5
+                      | Taller sobre p5 y React
+                  a(href='/blog') read more
+              li.col-md-6
+                .overlay(data-aos='fade-up', data-aos-duration='1300')
+                  a(href='/blog')
+                    .blog-img
+                      figure
+                        img.img-fluid(src='images/img-2.jpg', alt='img-2')
+                      .blog-img-inner
+                    h5
+                      | Los mejores lenguajes de programación para web development
+                  a(href='/blog') read more
+              .overlay(data-aos='fade-up', data-aos-duration='1200')
+                a.get-started-btn(href='/blog') Más Articulos
+      footer
+        .layer
+          .container
+            nav.navbar.navbar-expand.p-0
+              a.navbar-brand.mr-0.pr-2.pr-sm-4(href='/')
+                h2.logo Multimedia-Box
+              .nav-sec
+                ul.ml-md-auto
+                  li.nav-item.active
+                    a.nav-link.active.text-black(href='/')
+                      | Home
+                  li.nav-item
+                    a.nav-link(href='/blog')
+                      | Blog
+                  li.nav-item
+                    a.nav-link(href='/artistas')
+                      | artistas
+                  li
+                    p.m-0
+                      | ©2019, Multimedia-Box todo los derechos reservados
+      a(href='#inicio')               
+        button.scrolltop-btn
+          i.fa.fa-angle-up
+        
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js')
+      script(src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js')
+      script(src='js/script.js')
+      script.
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+        });

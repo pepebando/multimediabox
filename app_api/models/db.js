@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 var gracefulShutdown;
 //var dbURI='mongodb://localhost:27017/spam';
-var dbURI='mongodb+srv://jose:joseAtlas@pruebas-xkgrz.azure.mongodb.net/test?retryWrites=true';
+
+var dbURI='mongodb+srv://pepebando:claveatlas@cluster0-avauj.mongodb.net/DBTest.Multimediabox?retryWrites=true';
 
 mongoose.connect(dbURI,{useNewUrlParser: true});
 
@@ -41,9 +42,3 @@ process.on('SIGTERM', function(){
 		process.exit(0);
 	});
 });
-
-require('./peliculas');
-require('./libros');
-require('./juegos');
-require('./series');
-require('./canciones');
