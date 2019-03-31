@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Art = mongoose.model('Artistas');
+var Art = mongoose.model('Artista');
 
 
 var sendJsonResponse = function(res, status, content){
@@ -44,40 +44,6 @@ module.exports.ArtistasList = function (req, res) {
 	};
 
 
-module.exports.ArtistasUpdateOne = function (req, res) {
-	if (!req.params.artistasid) {
-		sendJsonResponse(res, 404, {
-		  "message": "id is required"
-		});
-		return;
-	  }
-	  Art.findById(req.params.artistasid).exec(
-		  function(err, artista) {
-			if (!artista) {
-			  sendJsonResponse(res, 404, {
-				"message": "id not found"
-			  });
-			  return;
-			} else if (err) {
-			  sendJsonResponse(res, 400, err);
-			  return;
-			}
-      nombre: req.body.nombre,
-    	profesion: req.body.profesion,
-    	portafolio: req.body.portafolio,
-    	foto: req.body.foto
-
-
-			artista.save(function(err, artista) {
-			  if (err) {
-				sendJsonResponse(res, 404, err);
-			  } else {
-				sendJsonResponse(res, 200, artista);
-			  }
-			});
-		  }
-	  );
-	};
 
 
 module.exports.ArtistasDeleteOne = function (req, res) {
