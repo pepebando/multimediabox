@@ -44,3 +44,4 @@ process.on('SIGTERM', function(){
 });
 
 require('./artistas')
+require('./eventos')
