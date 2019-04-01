@@ -7,4 +7,4 @@ var ArtSchema = new mongoose.Schema({
 	foto:String
 });
 
-mongoose.model('Artistas',ArtSchema,'artistas');
+mongoose.model('Artista',ArtSchema,'artistas');
