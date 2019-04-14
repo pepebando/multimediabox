@@ -10,6 +10,17 @@ block content
        p.text-left(data-aos='fade-up', data-aos-duration='1000')
          | Los artistas interactivos están comprometidos en cambiar la relación entre los artistas y sus medios (entre sus obras y el público). En lugar de crear obras terminadas, el artista interactivo crea relaciones. El poder de esa expresión se multiplica por el hecho de que los interactores mismos se vuelven los referentes de las obras, nos ofrecen herramientas para construir identidades, nuestro sentido en relación con la obra artística.
        ul.row.tz-gallery
+          each artista in artistas
+            li.col-sm-6.col-md-4
+              a.lightbox(href=artista.portafolio)
+                .portfolio-gallery(data-aos='fade-up', data-aos-duration='1000')
+                  figure
+                    img(src=artista.foto, alt='one')
+                  .overlay
+                    span
+                        p=artista.nombre
+                      br
+                        p=artista.profesion
          li.col-sm-6.col-md-4
            a.lightbox(href='images/index-portfolio-1.jpg')
              .portfolio-gallery(data-aos='fade-up', data-aos-duration='1000')
