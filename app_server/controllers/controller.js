@@ -2,9 +2,6 @@ var request = require('request');
 var apiOptions = {
 	server : "http://localhost:3000"
 };
-if (process.env.NODE_ENV === 'production'){
-	apiOptions.server = "https://ladodelservidor.herokuapp.com/";
-}
 
 var renderArtistas = function (req, res, responseBody){
 	var message;
@@ -12,15 +9,14 @@ var renderArtistas = function (req, res, responseBody){
 		message = "API lookup error";
 		responseBody = [];
 	}
-	res.render('artistas',{
 
+	res.render('artistas',{
 		artistas:responseBody,
-		message : message
 	});
 }
 
 
-module.exports.artistasS=function (req,res) {
+module.exports.artistas=function (req,res) {
 	var requestOptions, path;
 	path = '/api/artistas';
 	requestOptions = {
@@ -36,9 +32,10 @@ module.exports.artistasS=function (req,res) {
 		function(err, response, body){
 			var data;
 			data = body;
+
 			if (response.statusCode === 200 && data.length) {
-				//función manejar algún field
-			}
+			//No Necesito manipulación previa
+		}
 			 renderArtistas(req, res, data);
 		});
 };
