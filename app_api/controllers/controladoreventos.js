@@ -10,7 +10,7 @@ module.exports.EventosCreate = function (req, res) {
   console.log(req.body);
   Eve.create({
     nombreevento: req.body.nombre,
-    fecha: req.body.profesion,
+    fecha: req.body.fecha,
 		descripcion:req.body.descripcion,
     foto: req.body.foto
 
