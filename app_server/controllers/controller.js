@@ -21,11 +21,42 @@ var renderArtistas = function (req, res, responseBody){
 	});
 }
 
+var renderEventos = function (req, res, responseBody){
+	var message;
+	if (!(responseBody instanceof Array)){
+		message = "API lookup error";
+		responseBody = [];
+	}
+
+	res.render('blog',{
+		eventos:responseBody,
+	});
+}
 module.exports.index=function(req,res){
     res.render('index', {title:'Main'});
 };
 module.exports.blog=function(req,res){
-    res.render('blog', {title:'Blog'});
+	var requestOptions, path;
+	path = '/api/eventos';
+	requestOptions = {
+		url : apiOptions.server + path,
+		method : "GET",
+		json : {},
+		qs : {
+
+		}
+	};
+	request (
+		requestOptions,
+		function(err, response, body){
+			var data;
+			data = body;
+
+			if (response.statusCode === 200 && data.length) {
+			//No Necesito manipulación previa
+		}
+			 renderEventos(req, res, data);
+		});
 };
 
 module.exports.artistasrender=function (req,res) {
