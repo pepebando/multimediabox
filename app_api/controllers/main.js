@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Art = mongoose.model('Artista');
+var modelapp = mongoose.model('Artista');
 
 var sendJsonResponse = function(res, status, content){
 	res.status(status);
@@ -8,7 +8,7 @@ var sendJsonResponse = function(res, status, content){
 
 module.exports.ArtistasCreate = function (req, res) {
 	console.log(req.body);
-	Art.create({
+	modelapp.create({
     nombre: req.body.nombre,
   	profesion: req.body.profesion,
   	portafolio: req.body.portafolio,
@@ -27,7 +27,7 @@ module.exports.ArtistasCreate = function (req, res) {
 	)};
 
 module.exports.ArtistasList = function (req, res) {
-	Art.find().exec(
+	modelapp.find().exec(
 	  	function(err, artista){
 	  		if (!artista) {
           sendJsonResponse(res, 404, {
@@ -48,7 +48,7 @@ module.exports.ArtistasList = function (req, res) {
 module.exports.ArtistasDeleteOne = function (req, res) {
 	var id = req.params.artistasid;
 	if (id) {
-	  Art
+	  modelapp
 		.findByIdAndRemove(id)
 		.exec(
 		  function(err, artista) {
@@ -70,7 +70,7 @@ module.exports.ArtistasDeleteOne = function (req, res) {
 
 	module.exports.ArtistasReadOne = function(req, res){
 		if (req.params && req.params.artistasid){
-			Art
+			modelapp
 				.findById(req.params.artistasid)
 				.exec(function(err, artista){
 					if(!artista){

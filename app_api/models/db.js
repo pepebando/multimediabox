@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var gracefulShutdown;
 
 
-var dbURI='mongodb+srv://pepebando:claveatlas@cluster0-avauj.mongodb.net/DBTest?retryWrites=true';
+var dbURI='mongodb://localhost/appdb';
 
 mongoose.connect(dbURI,{useNewUrlParser: true});
 

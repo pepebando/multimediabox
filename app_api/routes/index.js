@@ -1,7 +1,7 @@
 
 var express = require ('express');
 var router = express.Router();
-var ctrlArtistas = require('../controllers/controlador');
+var ctrlArtistas = require('../controllers/main');
 var ctrlEventos = require('../controllers/controladoreventos');
 
 router.get('/artistas', ctrlArtistas.ArtistasList);

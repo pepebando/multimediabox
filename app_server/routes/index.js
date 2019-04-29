@@ -1,15 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var ctrlMain=require('../controllers/main');
-var apictrol= require('../controllers/controller');
-/* GET home page. */
+var ctrlMain = require('../controllers/main')
 
-router.get('/artistas',apictrol.artistas);
 
-var Home = require('../controllers/main.js');
-router.get('/',Home.index);
-var Blog = require('../controllers/main.js');
-router.get('/blog',Blog.blog);
-var Artista = require('../controllers/main.js');
-router.get('/artistas',Artista.artistas);
+router.get('/artistas',ctrlMain.artistasrender);
+/*
+router.get('/',ctrlMain.index);
+router.get('/blog',ctrlMain.blog);*/
+
 module.exports = router;
