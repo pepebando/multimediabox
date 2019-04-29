@@ -1,6 +1,6 @@
 var request = require('request');
 var apiOptions = {
-	server : "https://ladodelservidor.herokuapp.com/"
+	server : "http://localhost:3000"
 };
 
 var renderArtistas = function (req, res, responseBody){
@@ -15,8 +15,14 @@ var renderArtistas = function (req, res, responseBody){
 	});
 }
 
+module.exports.index=function(req,res){
+    res.render('index', {title:'Main'});
+};
+module.exports.blog=function(req,res){
+    res.render('blog', {title:'Blog'});
+};
 
-module.exports.artistas=function (req,res) {
+module.exports.artistasrender=function (req,res) {
 	var requestOptions, path;
 	path = '/api/artistas';
 	requestOptions = {
