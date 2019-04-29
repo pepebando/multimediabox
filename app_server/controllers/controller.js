@@ -1,12 +1,6 @@
 var request = require('request');
 
-var apiOptions = {
-  server: "http://localhost:3000"
-};
-if (process.env.NODE_ENV === 'production'){
-  apiOptions.server = "https://ladodelservidor.herokuapp.com/";
-}
-console.log('Server now running in'+process.env.NODE_ENV);
+apiOptions.server = "https://ladodelservidor.herokuapp.com/";
 
 
 var renderArtistas = function (req, res, responseBody){
