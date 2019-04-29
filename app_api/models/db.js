@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var gracefulShutdown;
-var dbURI='mongodb+srv://pepebando:Waitandbleed16@cluster0-avauj.mongodb.net/test?retryWrites=true';
+var dbURI='mongodb+srv://pepebando:VNj2nDLZvlnvSJ46@cluster0-avauj.mongodb.net/test?retryWrites=true';
 
 mongoose.connect(dbURI,{useNewUrlParser: true});
 
